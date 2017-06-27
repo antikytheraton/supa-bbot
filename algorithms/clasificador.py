@@ -47,8 +47,8 @@ def mes_filtro(text):
 	
 	except:
 		return False
-while True:
-	text = input("prueba mes: ")
-	lower_text = text.lower()
-	mes = mes_filtro(lower_text)
-	print(mes)
+# while True:
+# 	text = input("prueba mes: ")
+# 	lower_text = text.lower()
+# 	mes = mes_filtro(lower_text)
+# 	print(mes)
