@@ -140,12 +140,16 @@ def send_message(recipient_id, text):
         "account linking": send_account_linking
     }
 
-    if text.lower() in special_keywords:
+    if text in special_keywords:
         special_keywords[text](recipient_id)
+        page.send(recipient_id, str(special_keywords[text](recipient_id)))
+
     elif mes_filtro(text.lower()) != False:
         page.send(recipient_id, str(mes_filtro(text.lower())), callback=send_text_callback, notification_type=NotificationType.REGULAR)
+
     elif estado_filter(text.lower()) != False:
         page.send(recipient_id, str(estado_filter(text.lower())), callback=send_text_callback, notification_type=NotificationType.REGULAR)
+        
     else:
         page.send(recipient_id, text, callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
