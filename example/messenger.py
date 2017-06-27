@@ -8,6 +8,8 @@ from example.config import CONFIG
 from fbmq import Attachment, Template, QuickReply, NotificationType
 from example.fbpage import page
 
+from algorithms.clasificador import mes_filtro
+
 USER_SEQ = {}
 
 
@@ -141,7 +143,7 @@ def send_message(recipient_id, text):
     if text in special_keywords:
         special_keywords[text](recipient_id)
     else:
-        page.send(recipient_id, text, callback=send_text_callback, notification_type=NotificationType.REGULAR)
+        page.send(recipient_id, str(mes_filtro(text)), callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
 
 def send_text_callback(payload, response):
