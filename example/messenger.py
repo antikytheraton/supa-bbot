@@ -143,9 +143,9 @@ def send_message(recipient_id, text):
 
     if text in special_keywords:
         special_keywords[text](recipient_id)
-        print('/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-        print(special_keywords[text](recipient_id))
-        print('/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print('/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print(special_keywords[text](recipient_id))
+        # print('/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
         # page.send(recipient_id, str(special_keywords[text](recipient_id)), callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
     elif mes_filtro(text.lower()) != False:
