@@ -53,6 +53,10 @@ def authorize():
 def assets(path):
     return send_from_directory('assets', path)
 
+@app.route('/algorithms/<path:path>')
+def algorithms(path):
+    return send_from_directory('algorithms', path)
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080, debug=True, threaded=True)
