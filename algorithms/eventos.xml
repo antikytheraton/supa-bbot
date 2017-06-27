@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eventos>
+<laterales>
+<lateralIzq><![CDATA[<br />]]></lateralIzq>
+<lateralDer><![CDATA[<br />]]></lateralDer>
+</laterales>
+<evento busqueda="FESTIVAL DE LA CERVEZA MONTERREY 2017 GUADALUPE Expl Est BBVA Bancomer" ciudad="GUADALUPE" clave_tipo="FAMILIARES" estatus_venta="NORMAL" facebook_like="288638224558920" fechas="30/06/2017 15:00, 01/07/2017 15:00" id="6wxl3KK2SELVjZ2omeW_iQ" nombre="FESTIVAL DE LA CERVEZA MONTERREY 2017" promocion_activa="0" promocion_recurrente_activa="0" recinto="Expl Est BBVA Bancomer" recintoId="qZ-4cXHB9gpHg9ExcbR4Pg" url_audio="-" url_imagen="/SuperBoletosRepositorio/eventosIVT/Evento_29945_I.jpg" url_msi="NO" url_thumbnail="/SuperBoletosRepositorio/events/Evento_29945_L.jpg" url_tipo="-" url_video="-" vigencia_fin="01/07/2017 13:00:00" vigencia_inicio="02/05/2017 10:00">
+<informacion><![CDATA[El evento más importante de la escena cervecera artesanal regresa a la ciudad, Festival de la Cerveza Monterrey 2017
+En esta cuarta edición del Festival de la Cerveza Monterrey, los cerveceros regiomontanos tienen el gusto de presentar 
+lo mejor de sus productos ante un público en busca de nuevas propuestas; así mismo, maestros cerveceros de todos los rincones 
+del país se reúnen en esta ocasión para enriquecer la basta oferta de estilos y variedades de cerveza, producidas por verdaderos artesanos.
+<br/>
+<br/>Más de 60 Cervecerías nacionales y extranjeras.
+<br/>Foodtrucks y stands de comida
+<br/>Oportunidad de conocer a los maestros cerveceros que elaboran la cerveza
+<br/>Catas y talleres.
+<br/>Presentaciones y lanzamientos de nuevas cervezas.
+<br/>Cervezas de edición especial.
+<br/>Presentaciones en vivo de bandas de la ciudad]]></informacion>
+<comunicado><![CDATA[ ]]></comunicado>
+<descripcion><![CDATA[No se permite el acceso a cámaras de video.<br/>
+No se permite el acceso a cámaras fotográficas profesionales.<br/>
+No se permite el acceso con iPads, ni otras tabletas.<br/>
+EVENTO EXCLUSIVO PARA MAYORES DE EDAD.<br/>
+No se permite el ingreso con alimentos y bebidas. <br/>]]></descripcion>
+<reventa>0</reventa>
+<redes_sociales>
+<aplicacion>
+<clave>Facebook</clave>
+<url_imagen>288638224558920</url_imagen>
+<id>288638224558920</id>
+</aplicacion>
+<aplicacion>
+<clave>Twitter</clave>
+<url_imagen>@SuperBoletosMX</url_imagen>
+<id>@SuperBoletosMX</id>
+</aplicacion>
+</redes_sociales>
+<fechas>
+<fecha>
+<estatus>NORMAL</estatus>
+<fecha_inicio>02/05/2017 10:00</fecha_inicio>
+<fecha_fin>01/07/2017 13:00:00</fecha_fin>
+</fecha>
+</fechas>
+</evento>
