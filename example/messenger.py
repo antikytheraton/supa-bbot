@@ -9,8 +9,7 @@ from fbmq import Attachment, Template, QuickReply, NotificationType
 from example.fbpage import page
 
 from algorithms.clasificador import mes_filtro, estado_filter
-from algorithms import movie_handler
-from movie_handler import MovieHandler
+from algorithms.movie_handler import MovieHandler
 import xml.sax
 
 USER_SEQ = {}
