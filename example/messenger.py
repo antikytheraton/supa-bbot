@@ -9,6 +9,9 @@ from fbmq import Attachment, Template, QuickReply, NotificationType
 from example.fbpage import page
 
 from algorithms.clasificador import mes_filtro, estado_filter
+from algorithms import movie_handler
+from movie_handler import MovieHandler
+import xml.sax
 
 USER_SEQ = {}
 
@@ -153,6 +156,13 @@ def send_message(recipient_id, text):
         page.send(recipient_id, str(estado_filter(text.lower())), callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
     else:
+
+        parser = xml.sax.make_parser()
+        parser.setFeature(xml.sax.handler.feature_namespaces, 0)
+
+        Handler = MovieHandler()
+        parser.setContentHandler( Handler )
+
         page.send(recipient_id, text, callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
 
