@@ -55,7 +55,7 @@ def assets(path):
 
 @app.route('/algorithms/<path:path>')
 def algorithms(path):
-    return send_from_directory('algorithms', path)
+    return "send_from_directory('algorithms', path)"
 
 
 if __name__ == '__main__':
