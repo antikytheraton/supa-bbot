@@ -10,7 +10,7 @@ from example.fbpage import page
 
 from algorithms.clasificador import mes_filtro, estado_filter
 from algorithms.movie_handler import MovieHandler
-import xml.sax
+# import xml.sax
 
 USER_SEQ = {}
 
