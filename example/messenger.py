@@ -184,12 +184,12 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
             ]))
 
-        if len(evento_key) == 2:
+        elif len(evento_key) == 2:
             page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
@@ -197,7 +197,7 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][1]),
@@ -206,12 +206,12 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
             ]))
 
-        if len(evento_key) == 3:
+        elif len(evento_key) == 3:
             page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
@@ -219,7 +219,7 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][1]),
@@ -228,7 +228,7 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][2]),
@@ -237,12 +237,12 @@ def send_message(recipient_id, text):
                                     image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        
                                         
                                     ]),
             ]))
 
-        if len(evento_key) == 4:
+        elif len(evento_key) == 4:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -250,7 +250,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -259,7 +259,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -268,7 +268,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -277,12 +277,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 5:
+        elif len(evento_key) == 5:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -290,7 +290,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -299,7 +299,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -308,7 +308,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -317,7 +317,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -326,12 +326,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 6:
+        elif len(evento_key) == 6:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -339,7 +339,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -348,7 +348,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -357,7 +357,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -366,7 +366,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -375,7 +375,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
@@ -384,12 +384,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 7:
+        elif len(evento_key) == 7:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -397,7 +397,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -406,7 +406,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -415,7 +415,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -424,7 +424,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -433,7 +433,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
@@ -442,7 +442,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
@@ -451,12 +451,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 8:
+        elif len(evento_key) == 8:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -464,7 +464,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -473,7 +473,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -482,7 +482,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -491,7 +491,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -500,7 +500,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
@@ -509,7 +509,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
@@ -518,7 +518,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
@@ -527,12 +527,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 9:
+        elif len(evento_key) == 9:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -540,7 +540,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -549,7 +549,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -558,7 +558,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -567,7 +567,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -576,7 +576,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
@@ -585,7 +585,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
@@ -594,7 +594,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
@@ -603,7 +603,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][8]),
@@ -612,12 +612,12 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
 
-        if len(evento_key) == 10:
+        elif len(evento_key) == 10:
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
@@ -625,7 +625,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
@@ -634,7 +634,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
@@ -643,7 +643,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
@@ -652,7 +652,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
@@ -661,7 +661,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
@@ -670,7 +670,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
@@ -679,7 +679,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
@@ -688,7 +688,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][8]),
@@ -697,7 +697,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
             Template.GenericElement(str(evento_tupla[0][9]),
@@ -706,7 +706,7 @@ def send_message(recipient_id, text):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         ]))
@@ -771,7 +771,7 @@ def send_generic(recipient):
                                 image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    
                                     
                                 ]),
         Template.GenericElement("touch",
