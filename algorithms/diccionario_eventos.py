@@ -24,7 +24,7 @@ event_key = list(d.keys())
 event_val = list(d.values())
 
 # Aqui contruyo un diccionario de coincidencias
-event_match = {event_key[i]:difflib.get_close_matches('VERACRUZ', event_val[i]) for i in range(len(event_key))}
+event_match = {event_key[i]:difflib.get_close_matches('BIEBER', event_val[i]) for i in range(len(event_key))}
 
 # Aqui elimino todos elementos que no coincidieron con la busqueda
 reduct_event_match = {k: v for k, v in event_match.items() if v}
