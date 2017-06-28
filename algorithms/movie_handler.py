@@ -51,15 +51,15 @@ class MovieHandler( xml.sax.ContentHandler ):
       elif self.CurrentData == "description":
          self.description = content
   
-if ( __name__ == "__main__"):
+# if ( __name__ == "__main__"):
    
-   # create an XMLReader
-   parser = xml.sax.make_parser()
-   # turn off namepsaces
-   parser.setFeature(xml.sax.handler.feature_namespaces, 0)
+#    # create an XMLReader
+#    parser = xml.sax.make_parser()
+#    # turn off namepsaces
+#    parser.setFeature(xml.sax.handler.feature_namespaces, 0)
 
-   # override the default ContextHandler
-   Handler = MovieHandler()
-   parser.setContentHandler( Handler )
+#    # override the default ContextHandler
+#    Handler = MovieHandler()
+#    parser.setContentHandler( Handler )
    
-   parser.parse("movies.xml")
+#    parser.parse("movies.xml")
