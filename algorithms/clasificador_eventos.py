@@ -4,7 +4,7 @@ import random
 
 def event_filter(text):
 	# Aqui ocupo importo y parseo el archivo XML
-	f = open("XML_Evento.xml")
+	f = open("XML_Eventos.xml")
 	e = xml.etree.ElementTree.parse(f).getroot()
 
 	# Aqui armo el diccionario con todos los datos relevantes de los eventos
