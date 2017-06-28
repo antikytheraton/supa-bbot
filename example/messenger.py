@@ -157,12 +157,565 @@ def send_message(recipient_id, text):
         evento_key = list(eventos.keys())
         evento_val = list(eventos.values())
         evento_tupla = [evento_key, evento_val]
-        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        print('************************************************')
         print(evento_tupla)
+        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        print(evento_tupla[0][0])
+        print(evento_tupla[1][0])
+        print(evento_tupla[1][0][1])
+        print('------------------------------------------------')
+        print(evento_tupla[0][1])
+        print(evento_tupla[1][1])
+        print(evento_tupla[1][1][1])
         print(len(evento_key))
         print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
-        page.send(recipient_id, text, callback=send_text_callback, notification_type=NotificationType.REGULAR)
+        elements = []
+
+        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        print(str(elements))
+        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+
+        if len(evento_key) == 1:
+            page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+            ]))
+
+        if len(evento_key) == 2:
+            page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+            ]))
+
+        if len(evento_key) == 3:
+            page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="https://www.oculus.com/en-us/rift/",
+                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    ]),
+            ]))
+
+        if len(evento_key) == 4:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 5:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 6:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][5]),
+                                subtitle=str(evento_tupla[1][5][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 7:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][5]),
+                                subtitle=str(evento_tupla[1][5][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][6]),
+                                subtitle=str(evento_tupla[1][6][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 8:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][5]),
+                                subtitle=str(evento_tupla[1][5][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][6]),
+                                subtitle=str(evento_tupla[1][6][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][7]),
+                                subtitle=str(evento_tupla[1][7][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 9:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][5]),
+                                subtitle=str(evento_tupla[1][5][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][6]),
+                                subtitle=str(evento_tupla[1][6][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][7]),
+                                subtitle=str(evento_tupla[1][7][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][8]),
+                                subtitle=str(evento_tupla[1][8][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        if len(evento_key) == 10:
+            page.send(recipient_id, Template.Generic([
+            Template.GenericElement(str(evento_tupla[0][0]),
+                                subtitle=str(evento_tupla[1][0][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][1]),
+                                subtitle=str(evento_tupla[1][1][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][2]),
+                                subtitle=str(evento_tupla[1][2][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][3]),
+                                subtitle=str(evento_tupla[1][3][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][4]),
+                                subtitle=str(evento_tupla[1][4][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][5]),
+                                subtitle=str(evento_tupla[1][5][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][6]),
+                                subtitle=str(evento_tupla[1][6][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][7]),
+                                subtitle=str(evento_tupla[1][7][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][8]),
+                                subtitle=str(evento_tupla[1][8][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+            Template.GenericElement(str(evento_tupla[0][9]),
+                                subtitle=str(evento_tupla[1][9][1]),
+                                item_url="https://www.oculus.com/en-us/rift/",
+                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                buttons=[
+                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
+                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                ]),
+        ]))
+
+        else:
+            page.send(recipient_id, text)
+
+
+
 
 
 def send_text_callback(payload, response):
