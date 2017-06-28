@@ -180,12 +180,12 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
             ]))
 
@@ -193,21 +193,21 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][1]),
                                     subtitle=str(evento_tupla[1][1][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
             ]))
 
@@ -215,30 +215,30 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][1]),
                                     subtitle=str(evento_tupla[1][1][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
                 Template.GenericElement(str(evento_tupla[0][2]),
                                     subtitle=str(evento_tupla[1][2][1]),
-                                    item_url="https://www.oculus.com/en-us/rift/",
-                                    image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                     buttons=[
-                                        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                        
                                     ]),
             ]))
 
@@ -246,39 +246,39 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -286,48 +286,48 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -335,57 +335,57 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
                                 subtitle=str(evento_tupla[1][5][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -393,66 +393,66 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
                                 subtitle=str(evento_tupla[1][5][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
                                 subtitle=str(evento_tupla[1][6][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -460,75 +460,75 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
                                 subtitle=str(evento_tupla[1][5][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
                                 subtitle=str(evento_tupla[1][6][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
                                 subtitle=str(evento_tupla[1][7][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -536,84 +536,84 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
                                 subtitle=str(evento_tupla[1][5][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
                                 subtitle=str(evento_tupla[1][6][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
                                 subtitle=str(evento_tupla[1][7][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][8]),
                                 subtitle=str(evento_tupla[1][8][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -621,93 +621,93 @@ def send_message(recipient_id, text):
             page.send(recipient_id, Template.Generic([
             Template.GenericElement(str(evento_tupla[0][0]),
                                 subtitle=str(evento_tupla[1][0][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][1]),
                                 subtitle=str(evento_tupla[1][1][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][2]),
                                 subtitle=str(evento_tupla[1][2][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][3]),
                                 subtitle=str(evento_tupla[1][3][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][4]),
                                 subtitle=str(evento_tupla[1][4][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][5]),
                                 subtitle=str(evento_tupla[1][5][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][6]),
                                 subtitle=str(evento_tupla[1][6][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][7]),
                                 subtitle=str(evento_tupla[1][7][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][8]),
                                 subtitle=str(evento_tupla[1][8][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
             Template.GenericElement(str(evento_tupla[0][9]),
                                 subtitle=str(evento_tupla[1][9][1]),
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         ]))
 
@@ -723,7 +723,7 @@ def send_text_callback(payload, response):
 
 
 def send_image(recipient):
-    page.send(recipient, Attachment.Image(CONFIG['SERVER_URL'] + "/assets/rift.png"))
+    page.send(recipient, Attachment.Image("https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg"))
 
 
 def send_gif(recipient):
@@ -746,15 +746,15 @@ def send_button(recipient):
     """
     Shortcuts are supported
     page.send(recipient, Template.Buttons("hello", [
-        {'type': 'web_url', 'title': 'Open Web URL', 'value': 'https://www.oculus.com/en-us/rift/'},
+        {'type': 'web_url', 'title': 'Open Web URL', 'value': 'http://web.superboletos.com:8001/SuperBoletos/index.do'},
         {'type': 'postback', 'title': 'tigger Postback', 'value': 'DEVELOPED_DEFINED_PAYLOAD'},
         {'type': 'phone_number', 'title': 'Call Phone Number', 'value': '+16505551234'},
     ]))
     """
     page.send(recipient, Template.Buttons("hello", [
-        Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
         Template.ButtonPostBack("trigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-        Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+        
     ]))
 
 
@@ -767,12 +767,12 @@ def send_generic(recipient):
     page.send(recipient, Template.Generic([
         Template.GenericElement("rift",
                                 subtitle="Next-generation virtual reality",
-                                item_url="https://www.oculus.com/en-us/rift/",
-                                image_url=CONFIG['SERVER_URL'] + "/assets/rift.png",
+                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
                                 buttons=[
-                                    Template.ButtonWeb("Open Web URL", "https://www.oculus.com/en-us/rift/"),
+                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     Template.ButtonPostBack("tigger Postback", "DEVELOPED_DEFINED_PAYLOAD"),
-                                    Template.ButtonPhoneNumber("Call Phone Number", "+16505551234")
+                                    
                                 ]),
         Template.GenericElement("touch",
                                 subtitle="Your Hands, Now in VR",
@@ -780,7 +780,7 @@ def send_generic(recipient):
                                 image_url=CONFIG['SERVER_URL'] + "/assets/touch.png",
                                 buttons=[
                                     {'type': 'web_url', 'title': 'Open Web URL',
-                                     'value': 'https://www.oculus.com/en-us/rift/'},
+                                     'value': 'http://web.superboletos.com:8001/SuperBoletos/index.do'},
                                     {'type': 'postback', 'title': 'tigger Postback',
                                      'value': 'DEVELOPED_DEFINED_PAYLOAD'},
                                     {'type': 'phone_number', 'title': 'Call Phone Number', 'value': '+16505551234'},
