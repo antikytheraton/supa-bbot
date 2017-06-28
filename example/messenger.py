@@ -157,8 +157,10 @@ def send_message(recipient_id, text):
         evento_key = list(eventos.keys())
         evento_val = list(eventos.values())
         evento_tupla = [evento_key, evento_val]
+        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
         print(evento_tupla)
         print(len(evento_key))
+        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
         page.send(recipient_id, text, callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
