@@ -101,7 +101,14 @@ def received_postback(event):
     print("Received postback for user %s and page %s with payload '%s' at %s"
           % (sender_id, recipient_id, payload, time_of_postback))
 
-    page.send(sender_id, "Postback called")
+    if payload == "HELLO":
+        page.send(sender_id, "Que onda?")
+        page.send(sender_id, "Disfruta de los mejores eventos con nuestras ofertas :D")
+        page.send(sender_id, "Que evento estas buscando?")
+        page.send(sender_id, "Puedes buscar por categorias (CONCIERTOS, CONFERENCIAS, DEPORTES, FAMILIARES, TEATRO, etc...)")
+        page.send(sender_id, "Por artista o simplemente escribe el estado en donde vives!")
+    else:
+        page.send(sender_id, "Postback called")
 
 
 @page.handle_read
@@ -157,44 +164,101 @@ def send_message(recipient_id, text):
         evento_key = list(eventos.keys())
         evento_val = list(eventos.values())
         evento_tupla = [evento_key, evento_val]
-        print('************************************************')
-        print(evento_tupla)
-        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-        print(evento_tupla[0][0])
-        print(evento_tupla[1][0])
-        print(evento_tupla[1][0][1])
-        print('------------------------------------------------')
-        print(evento_tupla[0][1])
-        print(evento_tupla[1][1])
-        print(evento_tupla[1][1][1])
-        print(len(evento_key))
-        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print('************************************************')
+        # print(evento_tupla)
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print(evento_tupla[0][0])
+        # print(evento_tupla[1][0])
+        # print(evento_tupla[1][0][1])
+        # print('------------------------------------------------')
+        # print(evento_tupla[0][1])
+        # print(evento_tupla[1][1])
+        # print(evento_tupla[1][1][1])
+        # print(len(evento_key))
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
-        elements = []
+        # elements = []
 
-        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-        print(str(elements))
-        print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print(str(elements))
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
-        if len(evento_key) == 1:
-            page.send(recipient_id, Template.Generic([
+        if eventos == False:
+            page.send(recipient_id, "Lo siento, no encontre coincidencias")
+
+        else:
+            if len(evento_key) == 1:
+                page.send(recipient_id, Template.Generic([
+                    Template.GenericElement(str(evento_tupla[0][0]),
+                                        subtitle=str(evento_tupla[1][0][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                ]))
+
+            elif len(evento_key) == 2:
+                page.send(recipient_id, Template.Generic([
+                    Template.GenericElement(str(evento_tupla[0][0]),
+                                        subtitle=str(evento_tupla[1][0][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                    Template.GenericElement(str(evento_tupla[0][1]),
+                                        subtitle=str(evento_tupla[1][1][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                ]))
+
+            elif len(evento_key) == 3:
+                page.send(recipient_id, Template.Generic([
+                    Template.GenericElement(str(evento_tupla[0][0]),
+                                        subtitle=str(evento_tupla[1][0][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                    Template.GenericElement(str(evento_tupla[0][1]),
+                                        subtitle=str(evento_tupla[1][1][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                    Template.GenericElement(str(evento_tupla[0][2]),
+                                        subtitle=str(evento_tupla[1][2][1]),
+                                        item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                        image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                        buttons=[
+                                            Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                            
+                                            
+                                        ]),
+                ]))
+
+            elif len(evento_key) == 4:
+                page.send(recipient_id, Template.Generic([
                 Template.GenericElement(str(evento_tupla[0][0]),
                                     subtitle=str(evento_tupla[1][0][1]),
                                     item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                    buttons=[
-                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        
-                                        
-                                    ]),
-            ]))
-
-        elif len(evento_key) == 2:
-            page.send(recipient_id, Template.Generic([
-                Template.GenericElement(str(evento_tupla[0][0]),
-                                    subtitle=str(evento_tupla[1][0][1]),
-                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         
@@ -203,29 +267,7 @@ def send_message(recipient_id, text):
                 Template.GenericElement(str(evento_tupla[0][1]),
                                     subtitle=str(evento_tupla[1][1][1]),
                                     item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                    buttons=[
-                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        
-                                        
-                                    ]),
-            ]))
-
-        elif len(evento_key) == 3:
-            page.send(recipient_id, Template.Generic([
-                Template.GenericElement(str(evento_tupla[0][0]),
-                                    subtitle=str(evento_tupla[1][0][1]),
-                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                    buttons=[
-                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                        
-                                        
-                                    ]),
-                Template.GenericElement(str(evento_tupla[0][1]),
-                                    subtitle=str(evento_tupla[1][1][1]),
-                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         
@@ -234,7 +276,16 @@ def send_message(recipient_id, text):
                 Template.GenericElement(str(evento_tupla[0][2]),
                                     subtitle=str(evento_tupla[1][2][1]),
                                     item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                    image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
                                     buttons=[
                                         Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                         
@@ -242,477 +293,437 @@ def send_message(recipient_id, text):
                                     ]),
             ]))
 
-        elif len(evento_key) == 4:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 5:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 5:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 6:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][5]),
+                                    subtitle=str(evento_tupla[1][5][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 6:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][5]),
-                                subtitle=str(evento_tupla[1][5][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 7:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][5]),
+                                    subtitle=str(evento_tupla[1][5][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][6]),
+                                    subtitle=str(evento_tupla[1][6][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 7:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][5]),
-                                subtitle=str(evento_tupla[1][5][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][6]),
-                                subtitle=str(evento_tupla[1][6][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 8:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][5]),
+                                    subtitle=str(evento_tupla[1][5][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][6]),
+                                    subtitle=str(evento_tupla[1][6][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][7]),
+                                    subtitle=str(evento_tupla[1][7][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 8:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][5]),
-                                subtitle=str(evento_tupla[1][5][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][6]),
-                                subtitle=str(evento_tupla[1][6][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][7]),
-                                subtitle=str(evento_tupla[1][7][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 9:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][5]),
+                                    subtitle=str(evento_tupla[1][5][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][6]),
+                                    subtitle=str(evento_tupla[1][6][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][7]),
+                                    subtitle=str(evento_tupla[1][7][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][8]),
+                                    subtitle=str(evento_tupla[1][8][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 9:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][5]),
-                                subtitle=str(evento_tupla[1][5][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][6]),
-                                subtitle=str(evento_tupla[1][6][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][7]),
-                                subtitle=str(evento_tupla[1][7][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][8]),
-                                subtitle=str(evento_tupla[1][8][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
+            elif len(evento_key) == 10:
+                page.send(recipient_id, Template.Generic([
+                Template.GenericElement(str(evento_tupla[0][0]),
+                                    subtitle=str(evento_tupla[1][0][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][1]),
+                                    subtitle=str(evento_tupla[1][1][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][2]),
+                                    subtitle=str(evento_tupla[1][2][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][3]),
+                                    subtitle=str(evento_tupla[1][3][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][4]),
+                                    subtitle=str(evento_tupla[1][4][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][5]),
+                                    subtitle=str(evento_tupla[1][5][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][6]),
+                                    subtitle=str(evento_tupla[1][6][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][7]),
+                                    subtitle=str(evento_tupla[1][7][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][8]),
+                                    subtitle=str(evento_tupla[1][8][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+                Template.GenericElement(str(evento_tupla[0][9]),
+                                    subtitle=str(evento_tupla[1][9][1]),
+                                    item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
+                                    image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
+                                    buttons=[
+                                        Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
+                                        
+                                        
+                                    ]),
+            ]))
 
-        elif len(evento_key) == 10:
-            page.send(recipient_id, Template.Generic([
-            Template.GenericElement(str(evento_tupla[0][0]),
-                                subtitle=str(evento_tupla[1][0][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][1]),
-                                subtitle=str(evento_tupla[1][1][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][2]),
-                                subtitle=str(evento_tupla[1][2][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][3]),
-                                subtitle=str(evento_tupla[1][3][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][4]),
-                                subtitle=str(evento_tupla[1][4][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][5]),
-                                subtitle=str(evento_tupla[1][5][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][6]),
-                                subtitle=str(evento_tupla[1][6][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][7]),
-                                subtitle=str(evento_tupla[1][7][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][8]),
-                                subtitle=str(evento_tupla[1][8][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-            Template.GenericElement(str(evento_tupla[0][9]),
-                                subtitle=str(evento_tupla[1][9][1]),
-                                item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
-                                buttons=[
-                                    Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
-                                    
-                                    
-                                ]),
-        ]))
-
-        else:
-            page.send(recipient_id, text)
+            else:
+                page.send(recipient_id, "No encontre eventos que coincidieran con tu busqueda :(")
 
 
 
@@ -723,7 +734,7 @@ def send_text_callback(payload, response):
 
 
 def send_image(recipient):
-    page.send(recipient, Attachment.Image("https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg"))
+    page.send(recipient, Attachment.Image("http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg"))
 
 
 def send_gif(recipient):
@@ -768,7 +779,7 @@ def send_generic(recipient):
         Template.GenericElement("rift",
                                 subtitle="Next-generation virtual reality",
                                 item_url="http://web.superboletos.com:8001/SuperBoletos/index.do",
-                                image_url="https://i.ytimg.com/vi/Nu6ApOzKKo0/maxresdefault.jpg",
+                                image_url="http://opinamx.com/wp-content/uploads/2017/02/20217SuperBoletos.jpg",
                                 buttons=[
                                     Template.ButtonWeb("Open Web URL", "http://web.superboletos.com:8001/SuperBoletos/index.do"),
                                     
