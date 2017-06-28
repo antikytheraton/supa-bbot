@@ -15,12 +15,12 @@ def event_filter(text):
 		d = {}
 		i = 1
 		for atype in e.findall('evento'):
-			if 'CANCELADO' not in atype.get('estatus_venta'):
-				listoflists.append(atype.get('nombre'))
-				l.append([atype.get('nombre'),atype.get('recinto'),atype.get('ciudad'),atype.get('clave_tipo'),[atype.get('fechas')]])
-				dictio = {atype.get('busqueda'):[atype.get('nombre'),atype.get('recinto'),atype.get('ciudad'),atype.get('clave_tipo')]}
-				d.update(dictio)
-				i += 1
+			# if 'CANCELADO' not in atype.get('estatus_venta'):
+			listoflists.append(atype.get('nombre'))
+			l.append([atype.get('nombre'),atype.get('recinto'),atype.get('ciudad'),atype.get('clave_tipo'),[atype.get('fechas')]])
+			dictio = {atype.get('busqueda'):[atype.get('nombre'),atype.get('recinto'),atype.get('ciudad'),atype.get('clave_tipo')]}
+			d.update(dictio)
+			i += 1
 
 		# Aqui creo dos listas a partir de mi diccionario, una con las keys y la otra con los values
 		event_key = list(d.keys())

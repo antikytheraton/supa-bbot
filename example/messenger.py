@@ -69,7 +69,7 @@ def received_message(event):
         quick_reply_payload = quick_reply.get('payload')
         print("quick reply for message %s with payload %s" % (message_id, quick_reply_payload))
 
-        page.send(sender_id, "Quick reply tapped")
+        # page.send(sender_id, "Quick reply tapped")
 
     if message_text:
         send_message(sender_id, message_text)
@@ -104,9 +104,15 @@ def received_postback(event):
     if payload == "HELLO":
         page.send(sender_id, "Que onda?")
         page.send(sender_id, "Disfruta de los mejores eventos con nuestras ofertas :D")
-        page.send(sender_id, "Que evento estas buscando?")
-        page.send(sender_id, "Puedes buscar por categorias (CONCIERTOS, CONFERENCIAS, DEPORTES, FAMILIARES, TEATRO, etc...)")
         page.send(sender_id, "Por artista o simplemente escribe el estado en donde vives!")
+        page.send(sender_id, "Que evento estas buscando?",
+              quick_replies=[QuickReply(title="Conciertos", payload="PICK_COMEDY"),
+                             QuickReply(title="Conferencias", payload="PICK_COMEDY"),
+                             QuickReply(title="Deportes", payload="PICK_COMEDY"),
+                             QuickReply(title="Familiares", payload="PICK_COMEDY"),
+                             QuickReply(title="Teatro", payload="PICK_COMEDY"),
+                             QuickReply(title="Ferias y Expos", payload="PICK_COMEDY")],
+              metadata="DEVELOPER_DEFINED_METADATA")
     else:
         page.send(sender_id, "Postback called")
 
@@ -184,7 +190,7 @@ def send_message(recipient_id, text):
         # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
         if eventos == False:
-            page.send(recipient_id, "Lo siento, no encontre coincidencias")
+            page.send(recipient_id, "Lo siento, no encontre coincidencias :/")
 
         else:
             if len(evento_key) == 1:
@@ -723,7 +729,8 @@ def send_message(recipient_id, text):
             ]))
 
             else:
-                page.send(recipient_id, "No encontre eventos que coincidieran con tu busqueda :(")
+                page.send(recipient_id, "No encontre eventos que coincidieran con tu busqueda :/")
+                page.send(recipient_id, "Intenta con palabras clave ;)")
 
 
 
