@@ -69,10 +69,39 @@ def received_message(event):
         quick_reply_payload = quick_reply.get('payload')
         print("quick reply for message %s with payload %s" % (message_id, quick_reply_payload))
 
+        # if quick_reply_payload == "ESTADOS":
+            
+
+        # elif quick_reply_payload == "CATEGORIAS":
+            
+        
+        # else:
         # page.send(sender_id, "Quick reply tapped")
 
     if message_text:
-        send_message(sender_id, message_text)
+
+        if message_text == 'Categorias':
+            page.send(sender_id, "Que evento estas buscando?",
+              quick_replies=[QuickReply(title="Conciertos", payload="PICK_COMEDY"),
+                             QuickReply(title="Conferencias", payload="PICK_COMEDY"),
+                             QuickReply(title="Deportes", payload="PICK_COMEDY"),
+                             QuickReply(title="Familiares", payload="PICK_COMEDY"),
+                             QuickReply(title="Teatro", payload="PICK_COMEDY"),
+                             QuickReply(title="Ferias y Expos", payload="PICK_COMEDY")],
+              metadata="DEVELOPER_DEFINED_METADATA")
+
+        elif message_text == 'Estados':
+            page.send(sender_id, "A donde quieres ir?",
+              quick_replies=[QuickReply(title="CDMX y Edomex", payload="PICK_COMEDY"),
+                             QuickReply(title="Hidalgo", payload="PICK_COMEDY"),
+                             QuickReply(title="Veracruz", payload="PICK_COMEDY"),
+                             QuickReply(title="Puebla", payload="PICK_COMEDY"),
+                             QuickReply(title="Guanajuato", payload="PICK_COMEDY"),],
+              metadata="DEVELOPER_DEFINED_METADATA")
+
+        else:
+            send_message(sender_id, message_text)
+
     elif message_attachments:
         page.send(sender_id, "Message with attachment received")
 
@@ -104,15 +133,12 @@ def received_postback(event):
     if payload == "HELLO":
         page.send(sender_id, "Que onda?")
         page.send(sender_id, "Disfruta de los mejores eventos con nuestras ofertas :D")
-        page.send(sender_id, "Por artista o simplemente escribe el estado en donde vives!")
-        page.send(sender_id, "Que evento estas buscando?",
-              quick_replies=[QuickReply(title="Conciertos", payload="PICK_COMEDY"),
-                             QuickReply(title="Conferencias", payload="PICK_COMEDY"),
-                             QuickReply(title="Deportes", payload="PICK_COMEDY"),
-                             QuickReply(title="Familiares", payload="PICK_COMEDY"),
-                             QuickReply(title="Teatro", payload="PICK_COMEDY"),
-                             QuickReply(title="Ferias y Expos", payload="PICK_COMEDY")],
+        page.send(sender_id, "Realiza tu busqueda por artista o simplemente escribe el estado en donde vives!")
+        page.send(sender_id, "Puedes realizar tu busqueda seleccionando cualquiera de las opciones o escribiendo directamente tu consulta ;p",
+              quick_replies=[QuickReply(title="Categorias", payload="CATEGORIAS"),
+                             QuickReply(title="Estados", payload="ESTADOS"),],
               metadata="DEVELOPER_DEFINED_METADATA")
+        
     else:
         page.send(sender_id, "Postback called")
 
