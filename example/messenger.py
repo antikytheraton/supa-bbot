@@ -8,6 +8,7 @@ from example.config import CONFIG
 from fbmq import Attachment, Template, QuickReply, NotificationType
 from example.fbpage import page
 from algorithms.clasificador_eventos import event_filter
+import random
 
 
 
@@ -189,6 +190,17 @@ def send_message(recipient_id, text):
 
     # elif estado_filter(text.lower()) != False:
     #     page.send(recipient_id, str(estado_filter(text.lower())), callback=send_text_callback, notification_type=NotificationType.REGULAR)
+
+    elif text.lower() == 'hola' or text.lower() == 'holi' or text.lower() == 'hola bot':
+        page.send(recipient_id, "Hola bro ;p")
+
+        saludos = [
+            "Hola bro ;p",
+            "Hola",
+            "Que onda?"
+        ]
+
+
 
     else:
         evento = text
