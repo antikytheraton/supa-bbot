@@ -104,7 +104,8 @@ def received_message(event):
             send_message(sender_id, message_text)
 
     elif message_attachments:
-        page.send(sender_id, "Message with attachment received")
+        page.send(sender_id, "Aun no reconozco esto LOL")
+        page.send(sender_id, "Prueba con texto")
 
 
 @page.handle_delivery
@@ -192,7 +193,7 @@ def send_message(recipient_id, text):
     #     page.send(recipient_id, str(estado_filter(text.lower())), callback=send_text_callback, notification_type=NotificationType.REGULAR)
 
     elif text.lower() == 'hola' or text.lower() == 'holi' or text.lower() == 'hola bot':
-        page.send(recipient_id, "Hola bro ;p")
+        page.send(recipient_id, "Hola ;p\nEscribe cualquier tema de tu interes")
 
         saludos = [
             "Hola bro ;p",

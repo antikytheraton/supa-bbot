@@ -10,7 +10,7 @@
 
 
 CONFIG = {
-    'FACEBOOK_TOKEN': 'EAANdhKleoKMBAFpp4ZB0kn39vSLJFq29AbNWZAEVt4fKS8cnNAyT9mz3FeSRBOc22Gv8qRh4j8VdZC5jZBQUYqhjoufV37j3FSlDQ66i6OZBaFqvenfVJ5g1ea3ghqHPoZCxefZCzo0TZB4RZCgg3wkxbrReZAIHYi77HkegHdDmh0DXnuknScEmoH',
+    'FACEBOOK_TOKEN': 'EAANdhKleoKMBAMgX4oCWg6XeRbwyhKvmQ7vKW0yGVPiFrWN2UAu8hfGkuqNmzC78kuFLDv0ZBLdIE1xEnmwM4SCMWZC2J9CjaLZAeMGaioSJCrcIGdWb6ia3wGwTI9cv3m5MlAYGSYzDYLOZAHBHJ2YbDtk6Qcll9ZBZCYA3jmmtj8ZCyOijl0X',
     'VERIFY_TOKEN': 'verify_supabbot',
-    'SERVER_URL': 'https://d6d0d9ed.ngrok.io/'
+    'SERVER_URL': 'https://f20bdde4.ngrok.io/'
 }
