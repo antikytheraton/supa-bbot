@@ -5,7 +5,8 @@ import random
 def event_filter(text):
 	try:
 		# Aqui ocupo importo y parseo el archivo XML
-		f = open("XML_Eventos.xml","rb")
+		# f = open("XML_Eventos.xml","rb")
+		f = open(CONFIG['SERVER_URL'] + "/assets/data_events.xml", "rb")
 		e = xml.etree.ElementTree.parse(f).getroot()
 
 		# Aqui armo el diccionario con todos los datos relevantes de los eventos

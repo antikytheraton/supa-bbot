@@ -12,5 +12,5 @@
 CONFIG = {
     'FACEBOOK_TOKEN': 'EAANdhKleoKMBAMgX4oCWg6XeRbwyhKvmQ7vKW0yGVPiFrWN2UAu8hfGkuqNmzC78kuFLDv0ZBLdIE1xEnmwM4SCMWZC2J9CjaLZAeMGaioSJCrcIGdWb6ia3wGwTI9cv3m5MlAYGSYzDYLOZAHBHJ2YbDtk6Qcll9ZBZCYA3jmmtj8ZCyOijl0X',
     'VERIFY_TOKEN': 'verify_supabbot',
-    'SERVER_URL': 'https://f20bdde4.ngrok.io/'
+    'SERVER_URL': 'https://super-boletos-bot.herokuapp.com'
 }

@@ -9,7 +9,8 @@ import example.messenger
 from example.config import CONFIG
 from example.fbpage import page
 
-app = Flask(__name__)
+# set the project root directory as the static folder, you can set others.
+app = Flask(__name__, static_url_path='')
 
 
 @app.route('/webhook', methods=['GET'])
@@ -54,5 +55,10 @@ def assets(path):
     return send_from_directory('assets', path)
 
 
+@app.route('/<path:path>')
+def xml_file(path):
+    return send_from_directory('XML_Eventos.xml', path)
+
+
 if __name__ == '__main__':
-    app.run(port=5000, debug=True, threaded=True)
+    app.run(port=8080, debug=True, threaded=True)
