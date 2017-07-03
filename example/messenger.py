@@ -206,32 +206,32 @@ def send_message(recipient_id, text):
     else:
         evento = text
         eventos = event_filter(evento)
+        evento_key = list(eventos.keys())
+        evento_val = list(eventos.values())
+        evento_tupla = [evento_key, evento_val]
+        # print('************************************************')
+        # print(evento_tupla)
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print(evento_tupla[0][0])
+        # print(evento_tupla[1][0])
+        # print(evento_tupla[1][0][1])
+        # print('------------------------------------------------')
+        # print(evento_tupla[0][1])
+        # print(evento_tupla[1][1])
+        # print(evento_tupla[1][1][1])
+        # print(len(evento_key))
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+
+        # elements = []
+
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
+        # print(str(elements))
+        # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
         if eventos == False:
             page.send(recipient_id, "Lo siento, no encontre coincidencias :/")
 
         else:
-            evento_key = list(eventos.keys())
-            evento_val = list(eventos.values())
-            evento_tupla = [evento_key, evento_val]
-            # print('************************************************')
-            # print(evento_tupla)
-            # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-            # print(evento_tupla[0][0])
-            # print(evento_tupla[1][0])
-            # print(evento_tupla[1][0][1])
-            # print('------------------------------------------------')
-            # print(evento_tupla[0][1])
-            # print(evento_tupla[1][1])
-            # print(evento_tupla[1][1][1])
-            # print(len(evento_key))
-            # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-
-            # elements = []
-
-            # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
-            # print(str(elements))
-            # print('\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/')
 
             if len(evento_key) == 1:
                 page.send(recipient_id, Template.Generic([
