@@ -1,3 +1,9 @@
+# coding: utf-8
+import os
+parentdir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+os.sys.path.insert(0,parentdir)
+
+from example.config import CONFIG
 import xml.etree.ElementTree
 import difflib
 import random
@@ -7,12 +13,14 @@ import urllib.request
 def event_filter(text):
 	try:
 		# Aqui ocupo importo y parseo el archivo XML
-		# f = open("XML_Eventos.xml","rb")
+		# f = open("XML_Evento.xml","rb")
 		# with urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml") as f:
 		# print(f.read())
 		# f = open(CONFIG['SERVER_URL'] + "/assets/data_events.xml", "r")
+		# f = urllib.request.urlopen("https://super-boletos-bot.herokuapp.com/assets/data_events.xml")
 		f = urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml")
-		e = xml.etree.ElementTree.parse(f.read().decode('utf-8')).getroot()
+		# data = f.read().decode('utf-8')
+		e = xml.etree.ElementTree.parse(f).getroot()
 
 		# Aqui armo el diccionario con todos los datos relevantes de los eventos
 		listoflists = []
@@ -62,9 +70,10 @@ def event_filter(text):
 # while True:
 # 	evento = input('que evento desea buscar?: ')
 # 	eventos = event_filter(evento.upper())
+# 	# print(eventos)
 # 	evento_key = list(eventos.keys())
 # 	evento_val = list(eventos.values())
 # 	evento_tupla = [evento_key, evento_val]
 # 	print(evento_tupla)
-# 	print(len(evento_key))
-	# print(len(eventos.items()))
+# 	# print(len(evento_key))
+# 	# print(len(eventos.items()))
