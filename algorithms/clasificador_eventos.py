@@ -9,7 +9,7 @@ def event_filter(text):
 		# Aqui ocupo importo y parseo el archivo XML
 		# f = open("XML_Eventos.xml","rb")
 		with urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml") as f:
-			print(f.read())
+			# print(f.read())
 			# f = open(CONFIG['SERVER_URL'] + "/assets/data_events.xml", "r")
 			e = xml.etree.ElementTree.parse(f).getroot()
 
