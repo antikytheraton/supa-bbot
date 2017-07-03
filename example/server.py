@@ -22,7 +22,7 @@ def validate():
 
         return request.args.get('hub.challenge', '')
     else:
-        return 'Failed validation. Make sure the validation tokens match.'
+        return 'Holi, XD'
 
 
 @app.route('/webhook', methods=['POST'])
