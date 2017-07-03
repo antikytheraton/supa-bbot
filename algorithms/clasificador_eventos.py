@@ -17,8 +17,8 @@ def event_filter(text):
 		# with urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml") as f:
 		# print(f.read())
 		# f = open(CONFIG['SERVER_URL'] + "/assets/data_events.xml", "r")
-		# f = urllib.request.urlopen("https://super-boletos-bot.herokuapp.com/assets/data_events.xml")
-		f = urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml")
+		f = urllib.request.urlopen("https://super-boletos-bot.herokuapp.com/assets/data_events.xml")
+		# f = urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml")
 		# data = f.read().decode('utf-8')
 		e = xml.etree.ElementTree.parse(f).getroot()
 
