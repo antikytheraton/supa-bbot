@@ -205,7 +205,7 @@ def send_message(recipient_id, text):
 
     else:
         evento = text
-        eventos = event_filter(evento)
+        eventos = event_filter(evento.upper())
         evento_key = list(eventos.keys())
         evento_val = list(eventos.values())
         evento_tupla = [evento_key, evento_val]
