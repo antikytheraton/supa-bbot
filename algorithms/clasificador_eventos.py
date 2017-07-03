@@ -12,7 +12,7 @@ def event_filter(text):
 		# print(f.read())
 		# f = open(CONFIG['SERVER_URL'] + "/assets/data_events.xml", "r")
 		f = urllib.request.urlopen(CONFIG['SERVER_URL'] + "/assets/data_events.xml")
-		e = xml.etree.ElementTree.parse(f).getroot()
+		e = xml.etree.ElementTree.parse(f.read().decode('utf-8')).getroot()
 
 		# Aqui armo el diccionario con todos los datos relevantes de los eventos
 		listoflists = []
